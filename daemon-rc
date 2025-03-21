@@ -1,0 +1,14 @@
+#!/bin/sh
+. /etc/rc.subr
+
+name="myphpdaemon"
+rcvar="${name}_enable"
+
+load_rc_config $name
+
+: ${myphpdaemon_enable:="NO"}
+: ${myphpdaemon_command:="/usr/bin/env php /path/to/myphpdaemon.php start"}
+
+start_cmd="/usr/sbin/daemon -p /var/run/myphpdaemon.pid ${myphpdaemon_command}"
+
+run_rc_command "$1"
