@@ -17,11 +17,11 @@ myphpdaemon_enable="YES"
 
 ## こう
 ```sh
-myphpdeamon start
+myphpdaemon start
 Starting daemon...
 Daemon started with PID 12345
 
-myphpdeamon status
+myphpdaemon status
 Daemon is running.
 ```
 
